@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6701850366883323462}
   - component: {fileID: 5023434594280434945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyRed1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2480935297486099401}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39072454, y: -0.065573275, z: -0.078116655}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1710512192696152505}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &5023434594280434945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45a68ecaa5b969348926490de4449927, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 29e12a7b9ad6c2c40ae02fb4e19fedd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: -6453164996431902476}
   - component: {fileID: 3158945676955743601}
   - component: {fileID: 7857328063595398353}
-  m_Layer: 0
+  - component: {fileID: 9091760506447891536}
+  m_Layer: 7
   m_Name: Enemy 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 8341682781163808798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -165,9 +166,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.39, y: -0.11040759}
+  m_Offset: {x: -0.004012376, y: 0.07}
   serializedVersion: 2
-  m_Radius: 0.3895924
+  m_Radius: 0.3574935
 --- !u!50 &-6453164996431902476
 Rigidbody2D:
   serializedVersion: 4
@@ -221,3 +222,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &9091760506447891536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341682781163808798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4d27cae8562934183be8cefb9a0d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 3483625540084496828, guid: 50baec243ee79b041aad17a07bc65754, type: 3}
+  projectileSpeed: 10
+  projectileLifeime: 5
+  baseFiringRate: 1
+  useAI: 1
+  minimumFiringRate: 0.1
+  firingRateVariance: 0.5
+  isFiring: 0
