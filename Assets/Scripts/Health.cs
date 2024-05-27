@@ -5,13 +5,14 @@ using UnityEngine;
 public class Heath : MonoBehaviour
 {
     [SerializeField] int health = 50;
-
+    [SerializeField] ParticleSystem hitEffect;
     void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
         if (damageDealer != null)
         {
             TakeDamage(damageDealer.GetDamage());
+            PlayerHitEffect();
             damageDealer.Hit();
         }
     }
@@ -21,6 +22,15 @@ public class Heath : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+
+    }
+    void PlayerHitEffect()
+    {
+        if (hitEffect != null)
+        {
+            ParticleSystem instance = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
         }
     }
 }

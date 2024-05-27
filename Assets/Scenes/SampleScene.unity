@@ -267,6 +267,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7070907078032467631, guid: 074ffe96cc4862c459e26ddffc93ffe4, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 5958753466611373904, guid: 9afff1cad72b9244aa0a0b06b15a0049, type: 3}
     - target: {fileID: 7270992776026663400, guid: 074ffe96cc4862c459e26ddffc93ffe4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -346,7 +350,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff6b71e4dcef2924b82c4a56ab5656bc, type: 2}
   - {fileID: 11400000, guid: b96bfa46caa301448abb2a29e9071a8b, type: 2}
   timeBetweenWaves: 0
-  isLoop: 1
+  isLooping: 1
 --- !u!4 &1765816859
 Transform:
   m_ObjectHideFlags: 0
