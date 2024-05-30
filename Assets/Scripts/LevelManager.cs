@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float timeDelay = 2f;
+    ScoreKeeper scoreKeeper;
+    void Awake()
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
     public void LoadGame()
     {
+        if (scoreKeeper != null)
+        {
+
+            scoreKeeper.ResetScore();
+        }
         SceneManager.LoadScene("Game");
     }
     public void LoadMainMenu()
