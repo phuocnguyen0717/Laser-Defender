@@ -9,12 +9,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float timeDelay = 2f;
     public void LoadGame()
     {
-        Debug.Log("Game");
         SceneManager.LoadScene("Game");
     }
     public void LoadMainMenu()
     {
-        Debug.Log("Mainmenu");
         SceneManager.LoadScene("MainMenu");
     }
     public void LoadGameOver()

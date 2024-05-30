@@ -10,13 +10,13 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
-    AudioPlay audioPlay;
+    AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
-        audioPlay = FindObjectOfType<AudioPlay>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
     }
@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         {
             TakeDamage(damageDealer.GetDamage());
             PlayerHitEffect();
-            audioPlay.PlayDamageClip();
+            audioPlayer.PlayDamageClip();
             ScreenShake();
             damageDealer.Hit();
         }
